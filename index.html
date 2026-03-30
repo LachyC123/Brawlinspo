@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+  <title>Starfall Showdown</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="rotateNotice">Rotate your phone for the best experience</div>
+
+    <section id="matchIntro" class="screen active">
+      <div class="intro-bg"></div>
+      <div id="cardsGrid"></div>
+      <div class="intro-bottom">
+        <div class="modeText">Every Starfighter for themselves!</div>
+        <div class="countdownWrap">Match starts in <span id="introCountdown">5</span></div>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen">
+      <canvas id="gameCanvas" width="1280" height="720"></canvas>
+      <div id="hudTop">
+        <div class="hud-pill" id="brawlersLeft">Brawlers left: 10</div>
+        <div class="hud-pill" id="topCenterBanner">SOLO SHOWDOWN</div>
+        <div class="hud-pill" id="statsBar">
+          <span>Ammo <strong id="ammoCount">3</strong></span>
+          <span>Power <strong id="powerCount">0</strong></span>
+          <span>Elims <strong id="elimCount">0</strong></span>
+        </div>
+      </div>
+      <div id="playerNameTag">You</div>
+      <div id="readyFightBanner" class="hidden"></div>
+      <div id="damageLayer"></div>
+      <div id="matchToast" class="hidden"></div>
+      <div id="joystickBase"><div id="joystickKnob"></div></div>
+      <div id="shootStickBase"><div id="shootStickKnob"></div></div>
+      <button id="superButton" aria-label="Super"></button>
+      <button id="shootButton" aria-label="Shoot">TAP</button>
+      <div id="killFeed"></div>
+      <div id="endOverlay" class="hidden">
+        <div class="end-card">
+          <div id="endTitle">You Win!</div>
+          <div id="endSubtitle">Rank 1</div>
+          <div id="endStats">
+            <div class="end-stat"><span>Elims</span><strong id="endElims">0</strong></div>
+            <div class="end-stat"><span>Crates</span><strong id="endCrates">0</strong></div>
+            <div class="end-stat"><span>Damage</span><strong id="endDamage">0</strong></div>
+          </div>
+          <div id="resultMedal">STAR SURVIVOR</div>
+          <button id="playAgainBtn">Play Again</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
