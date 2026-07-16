@@ -1,0 +1,27 @@
+{
+  "name": "local-legend",
+  "version": "0.1.0",
+  "description": "LOCAL LEGEND — From Muddy Pitches to Football Immortality. A pixel-art mobile football career game for the browser.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "game",
+    "phaser",
+    "football",
+    "pixel-art",
+    "career"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "phaser": "^3.80.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  }
+}
